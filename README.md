@@ -8,3 +8,7 @@
   > For example ,  Restaurants "Meal-Card-Tracking" facility .
 
 *Thanks for your interest in this project*
+
+## Latest Release on 22-11-2020
+
+[TrackCert_v2.1-alpha](https://github.com/MehaRima/TrackCert_v2.1.1/releases/tag/TrackCert_v2.1-alpha)
