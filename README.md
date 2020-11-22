@@ -1,6 +1,7 @@
 # TrackCert
 
 *The basic version only lists and provides personal or individual organizing features.*
+  > For example , Personal accomplishments or certificates directory 
 
 - Developments are in progress to add drag-&-drop features.
 - Also it is envisioned to work and organize/track not just academic accomplishments for individuals but also commercial certificate tracking wrt enterprise/business verification certificates .
