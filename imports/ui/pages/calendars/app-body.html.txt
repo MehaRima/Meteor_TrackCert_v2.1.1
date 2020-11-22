@@ -1,0 +1,410 @@
+<body>
+
+
+
+<script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.3.5.1%22%2C%22meteorEnv%22%3A%7B%22NODE_ENV%22%3A%22development%22%2C%22TEST_METADATA%22%3A%22%7B%7D%22%7D%2C%22PUBLIC_SETTINGS%22%3A%7B%7D%2C%22ROOT_URL%22%3A%22http%3A%2F%2Flocalhost%3A3000%2F%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22appId%22%3A%22saq5ee128bswp5gowhr%22%2C%22autoupdateVersion%22%3A%222cb5460d933575c12f44fefc61b8e7e21e76beb0%22%2C%22autoupdateVersionRefreshable%22%3A%22b9279d0ef777ad5f2dc31df51523ffe6a641d704%22%2C%22autoupdateVersionCordova%22%3A%22none%22%7D"));</script>
+
+  <script type="text/javascript" src="/packages/underscore.js?hash=27b3d669b418de8577518760446467e6ff429b1e"></script>
+  <script type="text/javascript" src="/packages/meteor.js?hash=ae8b8affa9680bf9720bd8f7fa112f13a62f71c3"></script>
+  <script type="text/javascript" src="/packages/meteor-base.js?hash=78d760bd25caaa0aaaa51b630ff14fdbfddf0a80"></script>
+  <script type="text/javascript" src="/packages/mobile-experience.js?hash=228175c74a6bdd2cc7d213d791ad7633cde48eb6"></script>
+  <script type="text/javascript" src="/packages/modules-runtime.js?hash=b7370236eeaf57e8f4ac703424bc831028392451"></script>
+  <script type="text/javascript" src="/packages/modules.js?hash=825f94375a8d4069245024a82b376f0666e15da0"></script>
+  <script type="text/javascript" src="/packages/es5-shim.js?hash=e4d68c9ebbcdbd230d16f4bd933ee8dbf2978a22"></script>
+  <script type="text/javascript" src="/packages/promise.js?hash=2d5b025794b9c9e54e5cf6bea71c642ef921a2ed"></script>
+  <script type="text/javascript" src="/packages/ecmascript-runtime.js?hash=e4dd2b138377d446dc7dc3af21bb5bcd4b2b88a3"></script>
+  <script type="text/javascript" src="/packages/babel-compiler.js?hash=aa1ba23957a2a38a24bad15d8eb7dda850adb69a"></script>
+  <script type="text/javascript" src="/packages/ecmascript.js?hash=66523b499a44a9bde66a5c90da84c2f620fa9038"></script>
+  <script type="text/javascript" src="/packages/base64.js?hash=e5bbbab7ff79348492ae7e574cf7931e2ee72a11"></script>
+  <script type="text/javascript" src="/packages/ejson.js?hash=b1036d3e150ea4ea6470ea9cd45a48a12835d57e"></script>
+  <script type="text/javascript" src="/packages/id-map.js?hash=e665ae78e62a315f5fd218a68e373e364f74136c"></script>
+  <script type="text/javascript" src="/packages/ordered-dict.js?hash=61f1d7f16d10d9f37890aaf2455697ef7c8c378b"></script>
+  <script type="text/javascript" src="/packages/tracker.js?hash=f525263111eb9d90f4ce1ad064f97aca4a6c1b07"></script>
+  <script type="text/javascript" src="/packages/babel-runtime.js?hash=543034092ecef720d1732d8f72ab489f1877696f"></script>
+  <script type="text/javascript" src="/packages/random.js?hash=c4879267bde8bbc5ba66d23fa420cb239c44fb68"></script>
+  <script type="text/javascript" src="/packages/mongo-id.js?hash=172813d0ff26d0175642f30557d9980b3d852a17"></script>
+  <script type="text/javascript" src="/packages/diff-sequence.js?hash=21ebcc9500dc0ea4d28ec4454f001dfed0c5ab26"></script>
+  <script type="text/javascript" src="/packages/geojson-utils.js?hash=7214728d388f610508afa2a208b6117470822707"></script>
+  <script type="text/javascript" src="/packages/minimongo.js?hash=88217d643bc16fdf3505c6d4b2b8f5ddc400c49a"></script>
+  <script type="text/javascript" src="/packages/check.js?hash=bf95dee84c2be9008274d2385c637659760b9057"></script>
+  <script type="text/javascript" src="/packages/retry.js?hash=91c22616ae67cee99080f81fae9e6083bf7c5711"></script>
+  <script type="text/javascript" src="/packages/ddp-common.js?hash=a99cb35fd21daff658b592895ec8e2da5ee4c434"></script>
+  <script type="text/javascript" src="/packages/reload.js?hash=ad99c3e418c3fdc4fd1e08796369bded98b26b3d"></script>
+  <script type="text/javascript" src="/packages/ddp-client.js?hash=27502404fad7fc072e57e8b0b6719f40d92709c7"></script>
+  <script type="text/javascript" src="/packages/ddp.js?hash=752b775e282ca59c21ca09b9cc61f5fffb9ea2a1"></script>
+  <script type="text/javascript" src="/packages/ddp-server.js?hash=f22a106538ade54bd1190c4d309f2f94bdd3ec9b"></script>
+  <script type="text/javascript" src="/packages/allow-deny.js?hash=11ff6d1a797cb3d6608a96e8ab0bd82a4947ff49"></script>
+  <script type="text/javascript" src="/packages/insecure.js?hash=5679de9a1eaf70c1c18f8c3bf9493ebe2e4caa33"></script>
+  <script type="text/javascript" src="/packages/mongo.js?hash=f257f65490c0d34a164a6d8801ede96905340462"></script>
+  <script type="text/javascript" src="/packages/blaze-html-templates.js?hash=789c063ee96f7c7159040c8b3bf86cbc4ede975f"></script>
+  <script type="text/javascript" src="/packages/reactive-var.js?hash=4ec04bee8ba46a9256d34c18c7f0fbbb6e782570"></script>
+  <script type="text/javascript" src="/packages/standard-minifier-css.js?hash=28195a94bf7be7891ced328ed580307f7ac6ed54"></script>
+  <script type="text/javascript" src="/packages/standard-minifier-js.js?hash=555d6f310158f363207df43e0353de4a4883d7af"></script>
+  <script type="text/javascript" src="/packages/npm-bcrypt.js?hash=999fb0a24b0b2cc3ed14998aaea9a590002759b2"></script>
+  <script type="text/javascript" src="/packages/ddp-rate-limiter.js?hash=af60434f2a5f818b825b7a15c155f7afd5ac47ec"></script>
+  <script type="text/javascript" src="/packages/localstorage.js?hash=0b3ae3298494da2289abab2377342a1054cfca0b"></script>
+  <script type="text/javascript" src="/packages/callback-hook.js?hash=fff7fdef0707c85900b21f766a4b6c65bf278ff4"></script>
+  <script type="text/javascript" src="/packages/jquery.js?hash=22a0055f59bd150c435c5aba34c7c59076b8bcd9"></script>
+  <script type="text/javascript" src="/packages/deps.js?hash=af038305759a654448f8031d60f379835ae67a8c"></script>
+  <script type="text/javascript" src="/packages/htmljs.js?hash=3035d42f05f842d4beb2111cc6739b9ce6cd4ca4"></script>
+  <script type="text/javascript" src="/packages/observe-sequence.js?hash=550c39b36ab0e65194ea03cdc7ecbe99dcdd07f6"></script>
+  <script type="text/javascript" src="/packages/blaze.js?hash=ef41aed769a8945fc99ac4954e8c9ec157a88cea"></script>
+  <script type="text/javascript" src="/packages/accounts-base.js?hash=3f6353a90da402397ef0b889e3812a40c0a71704"></script>
+  <script type="text/javascript" src="/packages/sha.js?hash=569709b873cd1ba2cef4f2b0732cb4923ff5ce20"></script>
+  <script type="text/javascript" src="/packages/srp.js?hash=94d5df94b266ef008d0425c828f1715512e429ef"></script>
+  <script type="text/javascript" src="/packages/accounts-password.js?hash=26c5712042d53cb92bed4571735603904d1ec8bd"></script>
+  <script type="text/javascript" src="/packages/aldeed_simple-schema.js?hash=a36531b7660faa5522e7fade0b3f4daf5b4b6641"></script>
+  <script type="text/javascript" src="/packages/livedata.js?hash=e7fb2e783bc81b00b914c2e27966b7b6d3d081b6"></script>
+  <script type="text/javascript" src="/packages/spacebars.js?hash=65db8b6a8e3fca189b416de702967b1cb83d57d5"></script>
+  <script type="text/javascript" src="/packages/templating.js?hash=f43427e80c4a8a93daf5ed094c8141a0ee19c804"></script>
+  <script type="text/javascript" src="/packages/ui.js?hash=d0665bbf032532e2284f8843b30500babb10dd4d"></script>
+  <script type="text/javascript" src="/packages/reactive-dict.js?hash=efe4d7acf43d54e77a8d1b428c7cc15f6e132898"></script>
+  <script type="text/javascript" src="/packages/momentjs_moment.js?hash=99281b4ec5a6690fcc03003c04c872bb9addde87"></script>
+  <script type="text/javascript" src="/packages/raix_eventemitter.js?hash=f73e7166ed24e605f095ac7f16cc2ee6b3aafcea"></script>
+  <script type="text/javascript" src="/packages/aldeed_collection2-core.js?hash=78aa4a4dfcd4f54f1b080164dd6ca648f9f16f75"></script>
+  <script type="text/javascript" src="/packages/aldeed_schema-index.js?hash=da21b578f26d8a36d658a3af94517e1e4328eddb"></script>
+  <script type="text/javascript" src="/packages/aldeed_schema-deny.js?hash=44955b65d156080d05a87e961fd692d65185e52b"></script>
+  <script type="text/javascript" src="/packages/aldeed_collection2.js?hash=5ec6fbe0b5398f1a92bcb85b39683807a681c0b1"></script>
+  <script type="text/javascript" src="/packages/aldeed_autoform.js?hash=5dbf44ff89f182bd8c2512330e170ef4d5bf9582"></script>
+  <script type="text/javascript" src="/packages/fortawesome_fontawesome.js?hash=28274b3e7f4ac744781cd1750459a96687fef99e"></script>
+  <script type="text/javascript" src="/packages/session.js?hash=9ac45190b217c0c6a6293b0769e5a83f9dc8c003"></script>
+  <script type="text/javascript" src="/packages/stylus.js?hash=fb09bf5626e82075fc8820a486e2a410366fb3b5"></script>
+  <script type="text/javascript" src="/packages/anti_i18n.js?hash=a1081fcbac6b8d4e22f2e8fb6027b545cbca56fb"></script>
+  <script type="text/javascript" src="/packages/twbs_bootstrap.js?hash=dc805bf5d4e5b9ee8483c8702f78991d42bfc270"></script>
+  <script type="text/javascript" src="/packages/ian_accounts-ui-bootstrap-3.js?hash=075f79d4444d9d95a5b2aee6c09ed9a5f73ca24a"></script>
+  <script type="text/javascript" src="/packages/sacha_spin.js?hash=475de14b2da2dabadc9fbef7e46de4fd12e31dc9"></script>
+  <script type="text/javascript" src="/packages/coffeescript.js?hash=aaacad2a108fce73154794a6a3a2c2984e304558"></script>
+  <script type="text/javascript" src="/packages/kadira_flow-router.js?hash=09ea12875d3801955ee70797bf8e4a70feebc570"></script>
+  <script type="text/javascript" src="/packages/zimme_active-route.js?hash=eef5899b049cf07c5934903b338f3308a572cf27"></script>
+  <script type="text/javascript" src="/packages/kadira_blaze-layout.js?hash=493d22b2043f66d6b3694baa790b62a701aaec33"></script>
+  <script type="text/javascript" src="/packages/less.js?hash=b39fdd7af241f9bd5d3e15926c8447d65527f178"></script>
+  <script type="text/javascript" src="/packages/autopublish.js?hash=bc72b03fb56c2a80ef076107d3c27287cbc7ca08"></script>
+  <script type="text/javascript" src="/packages/mizzao_build-fetcher.js?hash=c60760ef38bcf06112d882315740e1542bd3ce57"></script>
+  <script type="text/javascript" src="/packages/mizzao_jquery-ui.js?hash=1500069951ea1f40d632f834c58e539964390745"></script>
+  <script type="text/javascript" src="/packages/webapp.js?hash=b74e2292d6087dc6f77d86b7e71ac0d672b0fbe8"></script>
+  <script type="text/javascript" src="/packages/hot-code-push.js?hash=9121bd39124b5010787be320ca559344b6691712"></script>
+  <script type="text/javascript" src="/packages/launch-screen.js?hash=bc0fd472cf89d0c9b8146f07ba048efcc11ef9ee"></script>
+  <script type="text/javascript" src="/packages/autoupdate.js?hash=cd7c85bd6e2795c4352bc0a76604e45642e47c31"></script>
+  <script type="text/javascript" src="/packages/global-imports.js?hash=c7187c45d7b6d4b879beefebf0a2b6655d634e2a"></script>
+  <script type="text/javascript" src="/app/app.js?hash=522c8efb975acbb5840f5a0c716495cd7edcad76"></script>
+  <script type="text/javascript" src="/packages/service-configuration.js?hash=331fe144dc8f69e5e44f23dd74b9de74ed80c6f3"></script>
+  <script type="text/javascript" src="/packages/mdg_validation-error.js?hash=579bd084aa8fa0bd15b629357dcc95fc382d9629"></script>
+
+
+
+
+
+
+	<div class="modal" id="login-buttons-reset-password-modal-success">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">Reset your password</h4>
+				</div>
+				<div class="modal-body">
+					
+	
+				</div>
+				<div class="modal-footer">
+					<a class="btn btn-default" id="login-buttons-dismiss-reset-password-success">Dismiss</a>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dalog -->
+	</div><!-- /.modal -->
+	
+	
+	
+	<div class="modal" id="login-buttons-message-dialog">
+		
+	</div><div id="__blaze-root">
+  
+    
+    
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">TrackCert</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <!-- TODO, add active class dynamically here -->
+                    <li id="meals-nav"><a href="/meals">Certificates</a></li>
+                    <li id="cals-nav" class="active"><a href="/calendars">Calendars</a></li>
+                    <li id="inst-nav"><a href="/instructions">Instructions</a></li>
+	   <li id="inst-nav"><a href="/about">About</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    
+		
+			<li id="login-dropdown-list" class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown">
+			abc@xyz.com
+			
+			<b class="caret"></b>
+		</a>
+		<div class="dropdown-menu">
+			
+				
+					
+
+	
+		<button class="btn btn-default btn-block" id="login-buttons-open-change-password">Change password</button>
+	
+
+	<button class="btn btn-block btn-primary" id="login-buttons-logout">Sign out</button>
+				
+			
+		</div>
+	</li>
+		
+	
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+   
+    
+  
+    
+    
+    
+    <div class="container template_root">
+        <div class="row">
+            <div class="col-sm-5">
+                
+        <div id="external-events-meals">
+            <h4>Your entries</h4>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                may
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                nov
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                nnkl
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                cjbLJBCL
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                v,hvh
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                kjhavklhk
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                kjgkgk
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                input
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                k,f
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                ukff
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+                <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                vhvjhv
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+            
+        </div>
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Well done!</strong> Click a calendar now to view it and add certificates.
+        </div>
+    
+            </div>
+            <div class="col-sm-7">
+                <h4>Add Certificate Form:</h4>
+    
+  
+    
+    
+    
+  
+  
+  <form id="calForm" novalidate="novalidate">
+    
+
+    
+      
+    
+    
+      
+        
+  
+    
+    
+    <div class="form-group" data-required="true">
+    
+    <label for="ggdpu4yF45NZBZz7y" class="control-label">Calendar Name</label>
+    
+    
+  
+    
+    
+    <input type="text" name="name" id="ggdpu4yF45NZBZz7y" required="" data-schema-key="name" maxlength="300" class="form-control">
+  
+  
+    <span class="help-block"></span>
+  </div>
+  
+  
+      
+    
+  
+  
+    
+    
+      
+        
+  
+    
+    
+    <div class="form-group" data-required="true">
+    
+    <label for="Ba6qeSTrTgBBBcvi7" class="control-label">Calendar Description</label>
+    
+    
+  
+    
+    
+    <input type="date" value="2020-07-22" name="description" id="mk3ZahpXNsKNJt8eT" required="" data-schema-key="description" class="form-control">
+  
+  
+    <span class="help-block"></span>
+  </div>
+  
+  
+      
+    
+  
+  
+    
+
+    
+
+    
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">
+          
+          Submit
+          
+        </button>
+      </div>
+    
+
+  
+  </form>
+  
+  
+  
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <hr>
+        <footer>
+            <p>© 2020 TrackCert, Inc.</p>
+        </footer>
+    </div>
+  
+  </div></body>

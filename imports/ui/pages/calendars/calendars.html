@@ -1,0 +1,113 @@
+<!-- template for showing the user's calendars -->
+<template name="calendars">
+    <div class="container template_root">
+        <div class="row">
+            <div class="col-sm-5">
+                {{> calList }}
+            </div>
+            <div class="col-sm-7">
+              {{> calForm }}
+            </div>
+        </div>
+    </div>
+    {{> footer }}
+</template>
+
+<!-- template for showing a particualr calendar -->
+<template name="calendar">
+    <div class="container-fluid template_root">
+        <div class="row">
+            <div class="col-sm-3">
+             
+                <h4>Certificate name:</h4>
+                <p>{{calendarName}}</p>
+                <h4>Date Description:</h4>
+               <p>{{calendarDescription}}</p>
+	</div>
+            </div>
+      </div>   
+    {{> footer }}
+</template>
+
+<!-- list of the user's calendars -->
+<template name="calList">
+    {{#if hasCals}}
+        <div id="external-events-meals">
+            <h4>Your entries</h4>
+            {{#each cal in cals}}
+                {{> calItem cal=cal}}
+            {{/each}}
+        </div>
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Well done!</strong> Click a calendar now to view it and add certificates.
+        </div>
+    {{else}}
+        <div class="alert alert-dismissible alert-danger">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Oh snap!</strong>Create an entry first.
+        </div>
+    {{/if}}
+</template>
+
+<template name="calItem">
+    <div class="row">
+        <div class="col-xs-10">
+            <div class="fc-event fc-event-meals js-goto-cal">
+                {{this.cal.name}}
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</template>
+
+<!-- add calendar form template -->
+<template name="calForm">
+    <h4>Add Certificate Form:</h4>
+    {{> quickForm id="calForm" collection="Calendars" type="insert"}}
+</template>
+
+<!-- the certificates to show on a calendar page -->
+<template name="calMeals">
+    {{#if hasMeals}}
+        <div id="external-events">
+            <h4> Certificates</h4>
+            {{#each meal in meals}}
+                {{> calMealItem meal=meal}}
+            {{/each}}
+        </div>
+    {{else}}
+        <h4>No certificates found:</h4>
+        <p>It looks like you have not created any certificates yet. Go back to <a href="/meals">Certificates</a> first.</p>
+    {{/if}}
+</template>
+
+<!-- each certificate draggable to a calendar -->
+<template name="calMealItem">
+    <div class="fc-event">
+        {{this.meal.name}}
+    </div>
+</template>
+
+
+<template name="calendar-Form">
+<form id="calForm" novalidate="novalidate">
+ <div class="form-group" data-required="true">
+<label for="ggdpu4yF45NZBZz7y" class="control-label">Certificate Name</label>
+<input type="text" name="name" id="ggdpu4yF45NZBZz7y" required="" data-schema-key="name" maxlength="300" class="form-control">
+<span class="help-block"></span>
+  </div>
+<div class="form-group" data-required="true">
+<label for="Ba6qeSTrTgBBBcvi7" class="control-label"> Date</label>
+  <input type="date" value="2020-07-22" name="description" id="mk3ZahpXNsKNJt8eT" required="" data-schema-key="description" class="form-control">
+ <span class="help-block"></span>
+  </div>
+<div class="form-group">
+<button type="submit" class="btn btn-primary">
+Submit
+</button>
+      </div>
+  </form>
+</template>

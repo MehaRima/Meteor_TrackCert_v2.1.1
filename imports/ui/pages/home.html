@@ -1,0 +1,35 @@
+<template name="home">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>TrackCert</h1>
+            <h2>The certificates tracking app</h2>
+            <p>Login to view <a href="/meals" class="js-meals-link">About You</a> and <a href="/calendars" class="js-cals-link">Achievements</a>.
+            </p>
+            <p><a class="btn btn-primary btn-lg" href="/instructions" role="button">Instructions &raquo;</a>
+           <a class="btn btn-primary btn-lg" href="/about" role="button">About Us &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2>About You</h2>
+                <p>Click below to view and enter some basic details about yourself</p>
+                <p><a class="btn btn-default {{isLoggedIn}}" href="/meals" role="button">View About You &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Certificates</h2>
+                <p>Click below to view and create Certificates.</p>               <!-- disable -->
+                <p><a class="btn btn-default {{isLoggedIn}}" href="/calendars" role="button">View entries &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Instructions</h2>
+                <p>Click below to view the instructions for Certificates Tracking.</p>
+                <p><a class="btn btn-default" href="/instructions" role="button">View Instructions &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+    {{> footer }}
+</template>

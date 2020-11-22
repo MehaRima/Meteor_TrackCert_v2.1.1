@@ -1,0 +1,148 @@
+
+Template.__checkName("calendars");
+Template["calendars"] = new Template("Template.calendars", (function() {
+  var view = this;
+  return [ HTML.DIV({
+    "class": "container template_root"
+  }, "\n        ", HTML.DIV({
+    "class": "row"
+  }, "\n            ", HTML.DIV({
+    "class": "col-sm-5"
+  }, "\n                ", Spacebars.include(view.lookupTemplate("calList")), "\n            "), "\n            ", HTML.DIV({
+    "class": "col-sm-7"
+  }, "\n                ", Spacebars.include(view.lookupTemplate("calForm")), "\n            "), "\n        "), "\n    "), "\n    ", Spacebars.include(view.lookupTemplate("footer")) ];
+}));
+
+Template.__checkName("calendar");
+Template["calendar"] = new Template("Template.calendar", (function() {
+  var view = this;
+  return [ HTML.DIV({
+    "class": "container-fluid template_root"
+  }, "\n        ", HTML.DIV({
+    "class": "row"
+  }, "\n            ", HTML.DIV({
+    "class": "col-sm-3"
+  }, "\n                ", Spacebars.include(view.lookupTemplate("calMeals")), "\n                ", HTML.Raw("<h4>Certificate name:</h4>"), "\n                ", HTML.P(Blaze.View("lookup:calendarName", function() {
+    return Spacebars.mustache(view.lookup("calendarName"));
+  })), "\n                ", HTML.Raw("<h4>Date Description:</h4>"), "\n                ", HTML.Raw("<p>Make sure it is correct</p>"), HTML.Raw('<input type="date" value="2020-07-22" name="description" id="mk3ZahpXNsKNJt8eT" required="" data-schema-key="description" class="form-control">'), "\n"), "\n            ", HTML.DIV({
+    "class": "col-sm-9"
+  }, "\n                ", HTML.Raw("<!-- calendar column -->"), "\n                ", Blaze._TemplateWith(function() {
+    return Spacebars.dataMustache(view.lookup("options"), Spacebars.kw({
+      id: "calendar"
+    }));
+  }, function() {
+    return Spacebars.include(view.lookupTemplate("fullcalendar"));
+  }), "\n            "), "\n        "), "\n    "), "\n    ", Spacebars.include(view.lookupTemplate("footer")) ];
+}));
+
+Template.__checkName("calList");
+Template["calList"] = new Template("Template.calList", (function() {
+  var view = this;
+  return Blaze.If(function() {
+    return Spacebars.call(view.lookup("hasCals"));
+  }, function() {
+    return [ "\n        ", HTML.DIV({
+      id: "external-events-meals"
+    }, "\n            ", HTML.H4("Your entries"), "\n            ", Blaze.Each(function() {
+      return {
+        _sequence: Spacebars.call(view.lookup("cals")),
+        _variable: "cal"
+      };
+    }, function() {
+      return [ "\n                ", Blaze._TemplateWith(function() {
+        return {
+          cal: Spacebars.call(view.lookup("cal"))
+        };
+      }, function() {
+        return Spacebars.include(view.lookupTemplate("calItem"));
+      }), "\n            " ];
+    }), "\n        "), "\n        ", HTML.DIV({
+      "class": "alert alert-dismissible alert-success"
+    }, "\n            ", HTML.BUTTON({
+      type: "button",
+      "class": "close",
+      "data-dismiss": "alert"
+    }, HTML.CharRef({
+      html: "&times;",
+      str: "×"
+    })), "\n            ", HTML.STRONG("Well done!"), " Click a calendar now to view it and add certificates.\n        "), "\n    " ];
+  }, function() {
+    return [ "\n        ", HTML.DIV({
+      "class": "alert alert-dismissible alert-danger"
+    }, "\n            ", HTML.BUTTON({
+      type: "button",
+      "class": "close",
+      "data-dismiss": "alert"
+    }, HTML.CharRef({
+      html: "&times;",
+      str: "×"
+    })), "\n            ", HTML.STRONG("Oh snap!"), "Create an entry first.\n        "), "\n    " ];
+  });
+}));
+
+Template.__checkName("calItem");
+Template["calItem"] = new Template("Template.calItem", (function() {
+  var view = this;
+  return HTML.DIV({
+    "class": "row"
+  }, "\n        ", HTML.DIV({
+    "class": "col-xs-10"
+  }, "\n            ", HTML.DIV({
+    "class": "fc-event fc-event-meals js-goto-cal"
+  }, "\n                ", Blaze.View("lookup:..cal.name", function() {
+    return Spacebars.mustache(Spacebars.dot(view.lookup("."), "cal", "name"));
+  }), "\n            "), "\n        "), HTML.Raw('\n        <div class="col-xs-2">\n            <a href="#" class="js-delete-cal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>\n        </div>\n    '));
+}));
+
+Template.__checkName("calForm");
+Template["calForm"] = new Template("Template.calForm", (function() {
+  var view = this;
+  return [ HTML.Raw("<h4>Add Certificate Form:</h4>\n    "), Blaze._TemplateWith(function() {
+    return {
+      id: Spacebars.call("calForm"),
+      collection: Spacebars.call("Calendars"),
+      type: Spacebars.call("insert")
+    };
+  }, function() {
+    return Spacebars.include(view.lookupTemplate("quickForm"));
+  }) ];
+}));
+
+Template.__checkName("calMeals");
+Template["calMeals"] = new Template("Template.calMeals", (function() {
+  var view = this;
+  return Blaze.If(function() {
+    return Spacebars.call(view.lookup("hasMeals"));
+  }, function() {
+    return [ "\n        ", HTML.DIV({
+      id: "external-events"
+    }, "\n            ", HTML.H4(" Certificates"), "\n            ", Blaze.Each(function() {
+      return {
+        _sequence: Spacebars.call(view.lookup("meals")),
+        _variable: "meal"
+      };
+    }, function() {
+      return [ "\n                ", Blaze._TemplateWith(function() {
+        return {
+          meal: Spacebars.call(view.lookup("meal"))
+        };
+      }, function() {
+        return Spacebars.include(view.lookupTemplate("calMealItem"));
+      }), "\n            " ];
+    }), "\n        "), "\n    " ];
+  }, function() {
+    return [ "\n        ", HTML.H4("No certificates found:"), "\n        ", HTML.P("It looks like you have not created any certificates yet. Go back to ", HTML.A({
+      href: "/meals"
+    }, "Certificates"), " first."), "\n    " ];
+  });
+}));
+
+Template.__checkName("calMealItem");
+Template["calMealItem"] = new Template("Template.calMealItem", (function() {
+  var view = this;
+  return HTML.DIV({
+    "class": "fc-event"
+  }, "\n        ", Blaze.View("lookup:..meal.name", function() {
+    return Spacebars.mustache(Spacebars.dot(view.lookup("."), "meal", "name"));
+  }), "\n    ");
+}));
